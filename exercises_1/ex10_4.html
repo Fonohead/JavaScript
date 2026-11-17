@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практика JS</title>
+</head>
+<body>
+    <script>
+        let userName = prompt('Введите своё имя');
+        let year = prompt('Введите год рождения');
+        let yearOfBirth = +year
+        let age = 2023 - yearOfBirth
+        if (! userName || !year || isNaN(yearOfBirth)) {
+            alert('Год не число или пустое имя');
+        } else {
+        let lastDigit = age % 10;
+
+            if (lastDigit === 1) {
+                alert(`${userName}: ${age} год`);
+            } else if (lastDigit >= 2 && lastDigit <=4) {
+                alert(`${userName}: ${age} года`);   
+            } else {
+                alert(`${userName}: ${age} лет`);
+            }    
+        }
+    </script>
+</body>
+</html>
